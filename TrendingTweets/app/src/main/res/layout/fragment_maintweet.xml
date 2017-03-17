@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userViewModel"
+            type="luisrodriguez.trendingtweets.ViewModel.UserViewModel" />
+
+        <variable
+            name="mainViewModel"
+            type="luisrodriguez.trendingtweets.ViewModel.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="@string/tweet_search_title"
+            android:textSize="@dimen/title_size" />
+
+        <EditText
+            android:id="@+id/search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_title"
+
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle_edittext"
+            android:hint="@string/hint_search"
+            android:inputType="text"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/button_prior_searches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/search_container"
+            android:layout_alignStart="@+id/search_container"
+            android:layout_below="@+id/search_container"
+            android:layout_marginTop="15dp"
+            android:text="@string/button_search_prior_title" />
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/search_container"
+            android:layout_alignRight="@+id/search_container"
+            android:layout_alignTop="@+id/button_prior_searches"
+            android:text="@string/button_search_title" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_influential_people"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/button_prior_searches"
+            android:layout_marginTop="16dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/influential_tweet" />
+
+    </RelativeLayout>
+
+
+</layout>

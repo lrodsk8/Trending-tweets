@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TweetSearch</string>
+    <string name="tweet_search_title">Tweet Search:</string>
+    <string name="prior_searches_title">Prior Searches:</string>
+    <string name="hint_search">ex: #barcelona</string>
+
+    <string name="image_content_description">User Image</string>
+    <string name="button_search_title">Search</string>
+    <string name="button_search_prior_title">Prior Searches</string>
+    <string name="search_hashtag_title">Search Hashtag</string>
+    <string name="search_results">Search Results list</string>
+
+</resources>
